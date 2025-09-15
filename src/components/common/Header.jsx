@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="w-full bg-global-1 px-4 sm:px-6 md:px-8 lg:px-[258px]">
       <div className="w-full max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-center py-4 sm:py-5 md:py-6">
+        <div className="flex justify-between items-center py-2 sm:py-3 md:py-4">
           {/* Mobile Menu Button */}
           <button 
             className="block lg:hidden p-2 text-global-10"
@@ -29,14 +29,21 @@ const Header = () => {
             </svg>
           </button>
 
-          {/* Contact Button */}
-          <div className="flex justify-center items-center ml-4 sm:ml-8 md:ml-[60px]">
+          {/* Auth Buttons */}
+          <div className="flex justify-center items-center gap-2 sm:gap-3 ml-4 sm:ml-8 md:ml-[60px]">
             <Button
               variant="outline"
-              onClick={() => {}} // Add this required onClick prop
-              className="px-4 py-2 sm:px-6 sm:py-2 md:px-[34px] md:py-[8px] text-sm sm:text-base md:text-[23px] font-extrabold leading-6 sm:leading-8 md:leading-[39px] text-global-10 border-2 border-global-10 rounded-[5px] hover:bg-global-10 hover:text-global-1 transition-all duration-200"
+              onClick={() => window.location.href = '/auth/login'}
+              className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-[16px] md:py-[6px] text-sm sm:text-base md:text-[16px] font-bold leading-4 sm:leading-5 md:leading-[24px] text-global-10 border-2 border-global-10 rounded-[5px] hover:bg-global-10 hover:text-global-1 transition-all duration-200"
             >
-              أتصل بنا
+              دخول
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={() => window.location.href = '/auth/register'}
+              className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-[16px] md:py-[6px] text-sm sm:text-base md:text-[16px] font-bold leading-4 sm:leading-5 md:leading-[24px] bg-global-8 text-global-1 rounded-[5px] hover:bg-global-9 transition-all duration-200"
+            >
+              تسجيل
             </Button>
           </div>
 
@@ -46,7 +53,7 @@ const Header = () => {
               <a
                 key={index}
                 href={item?.href}
-                className={`text-base md:text-[22px] font-bold leading-6 md:leading-[36px] text-global-10 hover:text-global-9 transition-colors duration-200 ${
+                className={`text-sm md:text-[18px] font-bold leading-5 md:leading-[28px] text-global-10 hover:text-global-9 transition-colors duration-200 ${
                   item?.active ? 'font-black' : ''
                 }`}
               >
@@ -62,19 +69,19 @@ const Header = () => {
               alt="Ausrah Family Organization Logo"
               width={140}
               height={71}
-              className="w-[100px] h-[51px] sm:w-[140px] sm:h-[71px] md:w-[200px] md:h-[102px] lg:w-[280px] lg:h-[142px]"
+              className="w-[80px] h-[41px] sm:w-[100px] sm:h-[51px] md:w-[140px] md:h-[71px] lg:w-[180px] lg:h-[91px]"
             />
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <nav className={`${menuOpen ? 'block' : 'hidden'} lg:hidden pb-4`}>
+        <nav className={`${menuOpen ? 'block' : 'hidden'} lg:hidden pb-3`}>
           <div className="flex flex-col gap-4">
             {navigationItems?.map((item, index) => (
               <a
                 key={index}
                 href={item?.href}
-                className={`text-lg font-bold text-global-10 hover:text-global-9 transition-colors duration-200 py-2 ${
+                className={`text-base font-bold text-global-10 hover:text-global-9 transition-colors duration-200 py-1.5 ${
                   item?.active ? 'font-black' : ''
                 }`}
                 onClick={() => setMenuOpen(false)}
@@ -82,6 +89,29 @@ const Header = () => {
                 {item?.text}
               </a>
             ))}
+            {/* Mobile Auth Buttons */}
+            <div className="flex gap-3 pt-3 border-t border-global-10 border-opacity-20">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  window.location.href = '/auth/login';
+                  setMenuOpen(false);
+                }}
+                className="flex-1 px-4 py-1.5 text-sm font-bold text-global-10 border-2 border-global-10 rounded-[5px] hover:bg-global-10 hover:text-global-1 transition-all duration-200"
+              >
+                دخول
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  window.location.href = '/auth/register';
+                  setMenuOpen(false);
+                }}
+                className="flex-1 px-4 py-1.5 text-sm font-bold bg-global-8 text-global-1 rounded-[5px] hover:bg-global-9 transition-all duration-200"
+              >
+                تسجيل
+              </Button>
+            </div>
           </div>
         </nav>
       </div>

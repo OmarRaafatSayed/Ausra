@@ -150,37 +150,54 @@ const HomePage = () => {
           </div>
         </section>
         {/* Partners Section */}
-        <section className="w-full bg-global-6 py-8 sm:py-12 md:py-16">
+        <section className="w-full bg-gradient-to-r from-global-6 via-global-7 to-global-6 py-8 sm:py-12 md:py-16 overflow-hidden">
           <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
             <div className="flex flex-col justify-start items-center w-full gap-6 sm:gap-8 md:gap-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold leading-tight sm:leading-tight md:leading-[85px] text-center text-global-2">
-                شركاء أُسرة
-              </h2>
-              <Image
-                src="/images/img_vector_1.svg"
-                alt="Decorative line"
-                width={258}
-                height={40}
-                className="w-[150px] h-[24px] sm:w-[200px] sm:h-[30px] md:w-[258px] md:h-[40px]"
-              />
-              {/* Partners Logos */}
-              <div className="flex flex-row justify-center items-center w-full max-w-[1326px] gap-4 sm:gap-6 md:gap-8 lg:gap-[50px] overflow-x-auto">
-                {partners?.map((partner, index) => (
-                  <div key={index} className="flex-shrink-0">
-                    <Image
-                      src={partner?.src}
-                      alt={partner?.alt}
-                      width={index === 0 ? 238 : index === 1 ? 128 : index === 2 ? 224 : index === 3 ? 202 : 168}
-                      height={index === 0 ? 126 : index === 1 ? 136 : index === 2 ? 102 : index === 3 ? 168 : 168}
-                      className={`${
-                        index === 0 ? 'w-[120px] h-[63px] sm:w-[180px] sm:h-[95px] md:w-[238px] md:h-[126px]' :
-                        index === 1 ? 'w-[64px] h-[68px] sm:w-[96px] sm:h-[102px] md:w-[128px] md:h-[136px]' :
-                        index === 2 ? 'w-[112px] h-[51px] sm:w-[168px] sm:h-[77px] md:w-[224px] md:h-[102px]' :
-                        index === 3 ? 'w-[101px] h-[84px] sm:w-[152px] sm:h-[126px] md:w-[202px] md:h-[168px]': 'w-[84px] h-[84px] sm:w-[126px] sm:h-[126px] md:w-[168px] md:h-[168px]'
-                      }`}
-                    />
-                  </div>
-                ))}
+              <div className="text-center animate-fadeIn">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold leading-tight sm:leading-tight md:leading-[85px] text-global-2 mb-4">
+                  شركاء العائلة
+                </h2>
+                <Image
+                  src="/images/img_vector_1.svg"
+                  alt="Decorative line"
+                  width={258}
+                  height={40}
+                  className="w-[150px] h-[24px] sm:w-[200px] sm:h-[30px] md:w-[258px] md:h-[40px] mx-auto"
+                />
+              </div>
+              
+              {/* Auto-scroll Carousel */}
+              <div className="w-full relative">
+                <div className="flex animate-scroll hover:pause-animation">
+                  {/* First set of logos */}
+                  {partners?.map((partner, index) => (
+                    <div key={`first-${index}`} className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8">
+                      <div className="bg-global-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-4 sm:p-6 md:p-8 w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] flex items-center justify-center hover:scale-105">
+                        <Image
+                          src={partner?.src}
+                          alt={partner?.alt}
+                          width={120}
+                          height={120}
+                          className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                  {/* Duplicate set for infinite scroll */}
+                  {partners?.map((partner, index) => (
+                    <div key={`second-${index}`} className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8">
+                      <div className="bg-global-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-4 sm:p-6 md:p-8 w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] flex items-center justify-center hover:scale-105">
+                        <Image
+                          src={partner?.src}
+                          alt={partner?.alt}
+                          width={120}
+                          height={120}
+                          className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
