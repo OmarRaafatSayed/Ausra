@@ -280,23 +280,23 @@ const HomePage = () => {
                   />
                 </div>
                 {/* Content Right */}
-                <div className="w-full lg:w-[50%] order-1 lg:order-2">
+                <div className="w-full lg:w-[50%] order-1 lg:order-2" dir="rtl">
                   <div className="flex flex-col gap-4 sm:gap-6">
                     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[52px] font-extrabold leading-tight sm:leading-tight md:leading-[85px] text-right text-global-2">
                       لبناء مجتمع داعم
                     </h3>
-                    <div className="bg-white rounded-lg p-4 sm:p-6 md:p-[16px]">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-[23px] font-semibold leading-6 sm:leading-7 md:leading-8 lg:leading-[38px] text-justify text-global-4">
-                        أُسرة ليست مجرد منصة للخدمات، بل هي مجتمع متكامل يجمع الأفراد والخبراء. نوفر مساحات آمنة للتفاعل وتبادل الخبرات، وورش عمل جماعية تعزز الشعور بالانتماء والدعم المتبادل، مما يسهم في بناء مجتمع أكثر وعيًا وتكافلاً.
-                      </p>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[23px] font-semibold leading-6 sm:leading-7 md:leading-8 lg:leading-[38px] text-right text-global-4 mb-4">
+                      أُسرة ليست مجرد منصة للخدمات، بل هي مجتمع متكامل يجمع الأفراد والخبراء. نوفر مساحات آمنة للتفاعل وتبادل الخبرات، وورش عمل جماعية تعزز الشعور بالانتماء والدعم المتبادل، مما يسهم في بناء مجتمع أكثر وعيًا وتكافلاً.
+                    </p>
+                    <div className="w-full flex justify-start">
+                      <Button
+                        variant="primary"
+                        onClick={() => {}}
+                        className="px-6 sm:px-8 lg:px-[34px] py-3 sm:py-4 lg:py-[14px] text-base sm:text-lg lg:text-[20px] font-extrabold leading-6 sm:leading-7 lg:leading-[33px] bg-global-1 text-global-10 rounded lg:rounded-[4px]"
+                      >
+                        أحجز جلسة
+                      </Button>
                     </div>
-                    <Button
-                      variant="primary"
-                      onClick={() => {}}
-                      className="self-start px-6 sm:px-8 lg:px-[34px] py-3 sm:py-4 lg:py-[14px] text-base sm:text-lg lg:text-[20px] font-extrabold leading-6 sm:leading-7 lg:leading-[33px] bg-global-1 text-global-10 rounded lg:rounded-[4px]"
-                    >
-                      أحجز جلسة
-                    </Button>
                   </div>
                 </div>
               </div>
@@ -304,23 +304,23 @@ const HomePage = () => {
               {/* Second Topic - Image Right, Text Left */}
               <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-8 lg:gap-12">
                 {/* Content Left */}
-                <div className="w-full lg:w-[50%]">
+                <div className="w-full lg:w-[50%]" dir="rtl">
                   <div className="flex flex-col gap-4 sm:gap-6">
                     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[52px] font-extrabold leading-tight sm:leading-tight md:leading-[85px] text-right text-global-2">
                       لتعزيز الروابط الأسرية
                     </h3>
-                    <div className="bg-white rounded-lg p-4 sm:p-6 md:p-[16px_40px]">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-[23px] font-semibold leading-6 sm:leading-7 md:leading-8 lg:leading-[38px] text-justify text-global-4">
-                        نقدم استشارات متخصصة وبرامج تدريبية موجهة للأسرة، لمساعدتك على فهم ديناميكيات العلاقات الأسرية، تحسين التواصل بين أفرادها، وحل النزاعات بشكل بناء، مما يؤدي إلى أسرة أكثر ترابطًا وسعادة.
-                      </p>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[23px] font-semibold leading-6 sm:leading-7 md:leading-8 lg:leading-[38px] text-right text-global-4 mb-4">
+                      نقدم استشارات متخصصة وبرامج تدريبية موجهة للأسرة، لمساعدتك على فهم ديناميكيات العلاقات الأسرية، تحسين التواصل بين أفرادها، وحل النزاعات بشكل بناء، مما يؤدي إلى أسرة أكثر ترابطًا وسعادة.
+                    </p>
+                    <div className="w-full flex justify-start">
+                      <Button
+                        variant="primary"
+                        onClick={() => {}}
+                        className="px-6 sm:px-8 lg:px-[34px] py-3 sm:py-4 lg:py-[14px] text-base sm:text-lg lg:text-[20px] font-extrabold leading-6 sm:leading-7 lg:leading-[33px] bg-global-1 text-global-10 rounded lg:rounded-[4px]"
+                      >
+                        أحجز جلسة
+                      </Button>
                     </div>
-                    <Button
-                      variant="primary"
-                      onClick={() => {}}
-                      className="self-start px-6 sm:px-8 lg:px-[34px] py-3 sm:py-4 lg:py-[14px] text-base sm:text-lg lg:text-[20px] font-extrabold leading-6 sm:leading-7 lg:leading-[33px] bg-global-1 text-global-10 rounded lg:rounded-[4px]"
-                    >
-                      أحجز جلسة
-                    </Button>
                   </div>
                 </div>
                 {/* Image Right */}
@@ -348,23 +348,23 @@ const HomePage = () => {
                   />
                 </div>
                 {/* Content Right */}
-                <div className="w-full lg:w-[50%] order-1 lg:order-2">
+                <div className="w-full lg:w-[50%] order-1 lg:order-2" dir="rtl">
                   <div className="flex flex-col gap-4 sm:gap-6">
                     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[52px] font-extrabold leading-tight sm:leading-tight md:leading-[85px] text-right text-global-2">
                       برامج مصممة لواقعك
                     </h3>
-                    <div className="bg-white rounded-lg p-4 sm:p-6 md:p-[16px_40px]">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-[23px] font-semibold leading-6 sm:leading-7 md:leading-8 lg:leading-[38px] text-justify text-global-4">
-                        ندرك التحديات التي تواجه الأسر والمجتمعات اليوم. لذلك، نصمم برامجنا وخدماتنا لتكون عملية، مرنة، وقابلة للتطبيق في حياتك اليومية، لمساعدتك على إحداث تغيير إيجابي ومستدام.
-                      </p>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[23px] font-semibold leading-6 sm:leading-7 md:leading-8 lg:leading-[38px] text-right text-global-4 mb-4">
+                      ندرك التحديات التي تواجه الأسر والمجتمعات اليوم. لذلك، نصمم برامجنا وخدماتنا لتكون عملية، مرنة، وقابلة للتطبيق في حياتك اليومية، لمساعدتك على إحداث تغيير إيجابي ومستدام.
+                    </p>
+                    <div className="w-full flex justify-start">
+                      <Button
+                        variant="primary"
+                        onClick={() => {}}
+                        className="px-6 sm:px-8 lg:px-[34px] py-3 sm:py-4 lg:py-[14px] text-base sm:text-lg lg:text-[20px] font-extrabold leading-6 sm:leading-7 lg:leading-[33px] bg-global-1 text-global-10 rounded lg:rounded-[4px]"
+                      >
+                        أحجز جلسة
+                      </Button>
                     </div>
-                    <Button
-                      variant="primary"
-                      onClick={() => {}}
-                      className="self-start px-6 sm:px-8 lg:px-[34px] py-3 sm:py-4 lg:py-[14px] text-base sm:text-lg lg:text-[20px] font-extrabold leading-6 sm:leading-7 lg:leading-[33px] bg-global-1 text-global-10 rounded lg:rounded-[4px]"
-                    >
-                      أحجز جلسة
-                    </Button>
                   </div>
                 </div>
               </div>
